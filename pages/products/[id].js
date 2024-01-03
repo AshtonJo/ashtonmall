@@ -1,5 +1,5 @@
-import SizeReviewList from "@/components/SizeReviewList";
-import axios from "@/lib/axios";
+import SizeReviewList from "@/components/SizeReviewList.js";
+import axios from "@/lib/axios.js";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 

@@ -1,26 +1,26 @@
+import ProductList from "@/components/ProductList";
 import SearchForm from "@/components/SearchForm.js";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
+import axios from "@/lib/axios.js";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  async function getProducts() {
+    const res = await axios.get("/products");
+    const nextProducts = res.data.results;
+    setProducts(nextProducts);
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, []);
   return (
-    <div>
+    <>
       <h1>AshtonMall</h1>
       <SearchForm />
-      <ul>
-        <li>
-          <Link href="/products/1">첫 번째 상품</Link>
-        </li>
-        <li>
-          <Link href="/products/2">두 번째 상품</Link>
-        </li>
-        <li>
-          <Link href="/products/3">세 번째 상품</Link>
-        </li>
-        <li>
-          <a href="https://codeit.kr">코드잇</a>
-        </li>
-      </ul>
-    </div>
+      <ProductList products={products} />
+    </>
   );
 }
