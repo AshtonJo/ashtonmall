@@ -12,6 +12,7 @@ export default function SearchForm({ initialValue = "" }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (!value) {
+      // 만약 검색값이 없다면 메인으로 이동
       router.push("/");
       return;
     }

@@ -1,11 +1,11 @@
-import SearchForm from "@/components/searchForm";
+import SearchForm from "@/components/SearchForm.js";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <h1>Codeitmall</h1>
+      <h1>AshtonMall</h1>
       <SearchForm />
       <ul>
         <li>

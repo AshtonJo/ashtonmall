@@ -1,9 +1,8 @@
-import SearchForm from "@/components/searchForm";
+import SearchForm from "@/components/SearchForm.js";
 import { useRouter } from "next/router";
 
 export default function Search() {
   const router = useRouter();
-  console.log(router);
   const { q } = router.query; // {q: "청바지"}
 
   return (
