@@ -1,8 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-size: 16px;
+}
+
+body.dark {
   background-color: #121212;
+}
+
+body.dark,
+body.dark a {
   color: #f9f9f9;
 }
 
+body.light {
+  background-color: #ededed;
+  color: #000000;
+}
+
+body.light a {
+  color: #000000;
+}
+
 a {
-  color: #f9f9f9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 80px 0;
 }
