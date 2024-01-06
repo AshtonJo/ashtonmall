@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "@/components/ProductList.module.css";
-import StarRating from "./StarRating";
+import StarRating from "@/components/StarRating.js";
 import Image from "next/image";
 
 export default function ProductList({ className = "", products }) {

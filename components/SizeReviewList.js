@@ -1,6 +1,6 @@
-import formatDate from '@/lib/formatDate';
-import sizeReviewLabels from '@/lib/sizeReviewLabels';
-import styles from './SizeReviewList.module.css';
+import formatDate from "@/lib/formatDate";
+import sizeReviewLabels from "@/lib/sizeReviewLabels";
+import styles from "@/components/SizeReviewList.module.css";
 
 export default function SizeReviewList({ sizeReviews }) {
   return (

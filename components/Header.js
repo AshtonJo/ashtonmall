@@ -1,6 +1,6 @@
 import Link from "next/link";
-import styles from "./Header.module.css";
-import Container from "./Container";
+import styles from "@/components/Header.module.css";
+import Container from "@/components/Container.js";
 
 export default function Header() {
   return (

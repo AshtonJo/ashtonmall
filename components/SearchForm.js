@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import styles from './SearchForm.module.css';
+import { useRouter } from "next/router";
+import { useState } from "react";
+import styles from "@/components/SearchForm.module.css";
 
-export default function SearchForm({ initialValue = '' }) {
+export default function SearchForm({ initialValue = "" }) {
   const router = useRouter();
   const [value, setValue] = useState(initialValue);
 
@@ -12,8 +12,9 @@ export default function SearchForm({ initialValue = '' }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // 검색창이 비어있을경우 엔터를 누르면 홈으로 이동.
     if (!value) {
-      router.push('/');
+      router.push("/");
       return;
     }
     router.push(`/search?q=${value}`);
