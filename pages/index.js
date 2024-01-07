@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductList from "@/components/ProductList";
 import SearchForm from "@/components/SearchForm";
-import axios from "@/lib/axios";
+import axios from "@/lib/axios.js";
 import styles from "@/styles/Home.module.css";
 import Head from "next/head";
 
